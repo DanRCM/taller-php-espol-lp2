@@ -1,1 +1,12 @@
-
+{
+  "name": "Taller PHP - ESPOL",
+  "image": "mcr.microsoft.com/devcontainers/php:8.2",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Servidor PHP",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postAttachCommand": "echo '✅ Entorno listo. Para iniciar el servidor ejecuta en la terminal: php -S 0.0.0.0:8000'"
+}
