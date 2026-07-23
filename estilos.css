@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  color: #1B2430;
+}
+
+.contenedor {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h1 { color: #1F3864; }
+h2 { color: #2E9E8F; margin-top: 28px; }
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  margin-top: 16px;
+  background-color: #2E9E8F;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+input[type="submit"]:hover { background-color: #257F79; }
+
+.error { color: #B23A48; font-weight: bold; }
+.exito { color: #1D9E75; font-weight: bold; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th { background-color: #1F3864; color: white; padding: 8px; text-align: left; }
+td { padding: 8px; border-bottom: 1px solid #ddd; }
+
+a { color: #2E9E8F; }
+
+.ayuda {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #5B6570;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+code {
+  background: #F2F4F7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: Consolas, monospace;
+}
