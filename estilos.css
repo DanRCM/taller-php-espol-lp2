@@ -34,7 +34,10 @@ input[type="email"] {
   border-radius: 4px;
 }
 
-input[type="submit"] {
+/* Estilos de botones unificados */
+input[type="submit"],
+button[type="submit"],
+input[type="reset"] {
   margin-top: 16px;
   background-color: #2E9E8F;
   color: white;
@@ -43,8 +46,14 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
+  transition: background-color 0.3s ease;
 }
-input[type="submit"]:hover { background-color: #257F79; }
+
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+input[type="reset"]:hover { 
+  background-color: #257F79; 
+}
 
 .error { color: #B23A48; font-weight: bold; }
 .exito { color: #1D9E75; font-weight: bold; }
@@ -53,7 +62,14 @@ table { width: 100%; border-collapse: collapse; margin-top: 12px; }
 th { background-color: #1F3864; color: white; padding: 8px; text-align: left; }
 td { padding: 8px; border-bottom: 1px solid #ddd; }
 
-a { color: #2E9E8F; }
+/* Enlaces generales */
+a { 
+  color: #2E9E8F; 
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 .ayuda {
   margin-top: 24px;
@@ -68,4 +84,100 @@ code {
   padding: 2px 6px;
   border-radius: 3px;
   font-family: Consolas, monospace;
+}
+
+/* Mejoras para las listas de tareas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f9fbfc;
+  border: 1px solid #e1e5eb;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.2s ease;
+}
+
+ul li:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Texto tachado para tareas completadas más sutil */
+del {
+  color: #8c98a4;
+}
+
+/* Contenedor de las acciones (Completar/Eliminar) */
+.acciones {
+  display: flex;
+  gap: 12px; 
+}
+
+/* Estilos de botones para los enlaces de acción */
+.acciones a {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Botón Completar (Verde) */
+.acciones a[href*="accion=completar"] {
+  background-color: #e8f5f3;
+  color: #2E9E8F;
+  border: 1px solid #2E9E8F;
+}
+
+.acciones a[href*="accion=completar"]:hover {
+  background-color: #2E9E8F;
+  color: white;
+}
+
+/* Botón Eliminar (Rojo) */
+.acciones a[href*="accion=eliminar"] {
+  background-color: #fbecec;
+  color: #B23A48;
+  border: 1px solid #B23A48;
+}
+
+.acciones a[href*="accion=eliminar"]:hover {
+  background-color: #B23A48;
+  color: white;
+}
+
+/* 
+   Ajuste EXCLUSIVO para el formulario de tareas.
+   Usamos [action="tareas.php"] para no dañar los formularios de registro e ingreso 
+*/
+form[action="tareas.php"] {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+form[action="tareas.php"] input[type="text"] {
+  flex-grow: 1; 
+  margin-top: 0; 
+}
+
+form[action="tareas.php"] button[type="submit"] {
+  margin-top: 0; 
+  white-space: nowrap;
+}
+
+/* Botón de cerrar sesión un poco más discreto */
+p a[href="logout.php"] {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #B23A48;
 }
